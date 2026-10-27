@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Revisá tu carrito de compras de Dulmori antes de finalizar tu pedido."
+    >
+
+    <title>Mi carrito | Dulmori</title>
+
+    <!-- Hoja de estilos compartida -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+    <header class="encabezado">
+
+        <div class="barra-superior">
+            <p>Un pequeño antojo puede alegrar tu día</p>
+        </div>
+
+        <div class="contenedor-header">
+
+            <a href="../index.html" class="logo" aria-label="Dulmori, página de inicio">
+                <span>Dulmori</span>
+            </a>
+
+            <nav class="navegacion-principal" aria-label="Navegación principal">
+                <a href="../index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="nosotros.html">Nosotros</a>
+            </nav>
+
+            <div class="acciones-header">
+                <a
+                    href="carrito.html"
+                    class="enlace-carrito activo"
+                    aria-current="page"
+                    aria-label="Ver carrito de compras"
+                >
+                    <span>Carrito</span>
+                    <span id="contador-carrito" class="contador-carrito">0</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             CARRITO DE COMPRAS
+        ========================== -->
+        <section class="pagina pagina-carrito" id="carrito">
+
+            <section class="hero-carrito">
+
+                <div class="contenido-hero-carrito">
+
+                    <p class="subtitulo-seccion">TU SELECCIÓN DULMORI</p>
+
+                    <h1>Tu carrito</h1>
+
+                    <p>
+                        Revisá tus productos y prepará tu próximo momento dulce.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="seccion-carrito">
+
+                <div class="encabezado-seccion">
+                    <h2>Tu pedido</h2>
+                    <p>Confirmá que todo esté como lo querés antes de continuar.</p>
+                </div>
+
+
+                <div class="contenido-carrito">
+
+                    <!-- =========================
+                         PRODUCTOS DEL CARRITO
+                    ========================== -->
+                    <div class="lista-carrito">
+
+                        <div
+                            id="carrito-productos"
+                            class="carrito-productos"
+                            aria-live="polite"
+                        >
+                            <!-- Los productos se insertan mediante scripts.js -->
+                        </div>
+
+
+                        <!-- Estado vacío -->
+                        <div
+                            id="carrito-vacio"
+                            class="carrito-vacio"
+                            hidden
+                        >
+
+                            <div class="icono-carrito-vacio" aria-hidden="true">
+                                <span>♡</span>
+                            </div>
+
+                            <h3>Tu carrito está esperando algo rico</h3>
+
+                            <p>
+                                Todavía no agregaste productos. Explorá el catálogo
+                                y encontrá algo que se te antoje.
+                            </p>
+
+                            <a href="catalogo.html" class="boton-principal">
+                                Explorar catálogo
+                            </a>
+
+                        </div>
+
+
+                        <p
+                            id="mensaje-carrito"
+                            class="mensaje-carrito"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+
+
+                        <div class="acciones-carrito">
+                            <a href="catalogo.html" class="boton-secundario">
+                                ← Seguir comprando
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         RESUMEN DE COMPRA
+                    ========================== -->
+                    <aside class="resumen-carrito">
+
+                        <h2>Resumen del pedido</h2>
+
+                        <div class="resumen-linea">
+                            <span>Productos</span>
+                            <span id="carrito-cantidad-total">0</span>
+                        </div>
+
+                        <div class="resumen-linea">
+                            <span>Subtotal</span>
+                            <span id="carrito-subtotal">$0.00</span>
+                        </div>
+
+                        <div class="resumen-linea">
+                            <span>Envío</span>
+                            <span id="carrito-envio">$0.00</span>
+                        </div>
+
+                        <div class="resumen-linea resumen-total">
+                            <span>Total</span>
+                            <span id="carrito-total">$0.00</span>
+                        </div>
+
+                        <p class="nota-resumen">
+                            Los costos finales se confirmarán antes de completar
+                            tu pedido.
+                        </p>
+
+                        <a
+                            href="pago.html"
+                            id="boton-continuar-pago"
+                            class="boton-principal boton-continuar-pago"
+                        >
+                            Continuar al pago
+                        </a>
+
+                        <a href="catalogo.html" class="enlace-volver-catalogo">
+                            Seguir explorando
+                        </a>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+    <footer id="pie-pagina" class="pie-pagina">
+
+        <div class="contenido-footer">
+
+            <div class="footer-marca">
+
+                <a href="../index.html" class="logo logo-footer">
+                    <span>Dulmori</span>
+                </a>
+
+                <p>
+                    Panadería y cafetería para disfrutar los pequeños
+                    momentos de la vida.
+                </p>
+
+            </div>
+
+
+            <div class="footer-enlaces">
+
+                <h3>Explorá</h3>
+
+                <a href="../index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="nosotros.html">Nosotros</a>
+
+            </div>
+
+
+            <div class="footer-enlaces">
+
+                <h3>Tu compra</h3>
+
+                <a href="carrito.html">Carrito</a>
+                <a href="pago.html">Finalizar compra</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-inferior">
+
+            <p>
+                &copy; <span id="anio-actual">2026</span> Dulmori.
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript compartido -->
+    <script src="../scripts.js"></script>
+
+    <script>
+        const anioActual = document.getElementById("anio-actual");
+
+        if (anioActual) {
+            anioActual.textContent = new Date().getFullYear();
+        }
+    </script>
+
+</body>
+</html>

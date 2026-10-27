@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Completá los datos de tu pedido y revisá tu compra en Dulmori."
+    >
+
+    <title>Finalizar compra | Dulmori</title>
+
+    <!-- Hoja de estilos compartida -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+    <header class="encabezado">
+
+        <div class="barra-superior">
+            <p>Un pequeño antojo puede alegrar tu día</p>
+        </div>
+
+        <div class="contenedor-header">
+
+            <a href="../index.html" class="logo" aria-label="Dulmori, página de inicio">
+                <span>Dulmori</span>
+            </a>
+
+            <nav class="navegacion-principal" aria-label="Navegación principal">
+                <a href="../index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="nosotros.html">Nosotros</a>
+            </nav>
+
+            <div class="acciones-header">
+                <a
+                    href="carrito.html"
+                    class="enlace-carrito"
+                    aria-label="Ver carrito de compras"
+                >
+                    <span>Carrito</span>
+                    <span id="contador-carrito" class="contador-carrito">0</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             PÁGINA DE PAGO
+        ========================== -->
+        <section class="pagina pagina-pago" id="pago">
+
+            <section class="hero-pago">
+
+                <div class="contenido-hero-pago">
+
+                    <p class="subtitulo-seccion">YA CASI ES TUYO</p>
+
+                    <h1>Finalizá tu pedido</h1>
+
+                    <p>
+                        Completá tus datos, revisá tu pedido y elegí cómo
+                        querés realizar el pago.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="seccion-pago">
+
+                <div class="encabezado-seccion">
+                    <h2>Detalles de tu compra</h2>
+                    <p>Verificá tu información antes de confirmar el pedido.</p>
+                </div>
+
+
+                <div class="contenido-pago">
+
+                    <!-- =========================
+                         FORMULARIO DEL CLIENTE
+                    ========================== -->
+                    <div class="formulario-pago-contenedor">
+
+                        <form id="formulario-pago" novalidate>
+
+                            <fieldset class="grupo-formulario">
+
+                                <legend>1. Tus datos</legend>
+
+                                <p class="descripcion-formulario">
+                                    Necesitamos esta información para gestionar
+                                    tu pedido.
+                                </p>
+
+
+                                <div class="campo-formulario">
+                                    <label for="nombre-cliente">
+                                        Nombre completo
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nombre-cliente"
+                                        name="nombre"
+                                        placeholder="Escribí tu nombre"
+                                        autocomplete="name"
+                                        required
+                                    >
+                                </div>
+
+
+                                <div class="campo-formulario">
+                                    <label for="correo-cliente">
+                                        Correo electrónico
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="correo-cliente"
+                                        name="correo"
+                                        placeholder="tunombre@correo.com"
+                                        autocomplete="email"
+                                        required
+                                    >
+                                </div>
+
+
+                                <div class="campo-formulario">
+                                    <label for="telefono-cliente">
+                                        Teléfono
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="telefono-cliente"
+                                        name="telefono"
+                                        placeholder="Tu número de teléfono"
+                                        autocomplete="tel"
+                                        required
+                                    >
+                                </div>
+
+                            </fieldset>
+
+
+                            <fieldset class="grupo-formulario">
+
+                                <legend>2. Entrega del pedido</legend>
+
+                                <div class="campo-formulario">
+                                    <label for="ciudad-cliente">
+                                        Ciudad o municipio
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="ciudad-cliente"
+                                        name="ciudad"
+                                        placeholder="Ciudad o municipio"
+                                        autocomplete="address-level2"
+                                        required
+                                    >
+                                </div>
+
+
+                                <div class="campo-formulario">
+                                    <label for="direccion-cliente">
+                                        Dirección de entrega
+                                    </label>
+
+                                    <textarea
+                                        id="direccion-cliente"
+                                        name="direccion"
+                                        rows="3"
+                                        placeholder="Colonia, calle, número de casa y referencias"
+                                        autocomplete="street-address"
+                                        required
+                                    ></textarea>
+                                </div>
+
+
+                                <div class="campo-formulario">
+                                    <label for="instrucciones-entrega">
+                                        Instrucciones adicionales
+                                        <span class="texto-opcional">(opcional)</span>
+                                    </label>
+
+                                    <textarea
+                                        id="instrucciones-entrega"
+                                        name="instrucciones"
+                                        rows="3"
+                                        placeholder="Indicaciones para encontrar tu dirección"
+                                    ></textarea>
+                                </div>
+
+                            </fieldset>
+
+
+                            <fieldset class="grupo-formulario">
+
+                                <legend>3. Método de pago</legend>
+
+                                <p class="descripcion-formulario">
+                                    Seleccioná una de las opciones disponibles.
+                                </p>
+
+
+                                <div class="opciones-metodo-pago">
+
+                                    <label class="opcion-metodo-pago">
+                                        <input
+                                            type="radio"
+                                            name="metodo-pago"
+                                            value="Efectivo contra entrega"
+                                            required
+                                        >
+
+                                        <span class="contenido-opcion-pago">
+                                            <strong>Efectivo contra entrega</strong>
+                                            <small>
+                                                Pagá cuando recibás tu pedido,
+                                                si esta opción está disponible.
+                                            </small>
+                                        </span>
+                                    </label>
+
+
+                                    <label class="opcion-metodo-pago">
+                                        <input
+                                            type="radio"
+                                            name="metodo-pago"
+                                            value="Transferencia bancaria"
+                                            required
+                                        >
+
+                                        <span class="contenido-opcion-pago">
+                                            <strong>Transferencia bancaria</strong>
+                                            <small>
+                                                Las instrucciones de pago deberán
+                                                proporcionarse al confirmar el pedido.
+                                            </small>
+                                        </span>
+                                    </label>
+
+
+                                    <label class="opcion-metodo-pago">
+                                        <input
+                                            type="radio"
+                                            name="metodo-pago"
+                                            value="Pago con tarjeta"
+                                            required
+                                        >
+
+                                        <span class="contenido-opcion-pago">
+                                            <strong>Pago con tarjeta</strong>
+                                            <small>
+                                                Disponible únicamente si el comercio
+                                                tiene una pasarela de pago habilitada.
+                                            </small>
+                                        </span>
+                                    </label>
+
+                                </div>
+
+                            </fieldset>
+
+
+                            <!-- Mensajes de validación existentes -->
+                            <p
+                                id="mensaje-validacion-pago"
+                                class="mensaje-validacion-pago"
+                                role="status"
+                                aria-live="polite"
+                            ></p>
+
+
+                            <div class="acciones-formulario-pago">
+
+                                <a href="carrito.html" class="boton-secundario">
+                                    ← Volver al carrito
+                                </a>
+
+                                <button
+                                    type="submit"
+                                    id="boton-finalizar-compra"
+                                    class="boton-principal"
+                                >
+                                    Confirmar pedido
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- =========================
+                         RESUMEN DEL PEDIDO
+                    ========================== -->
+                    <aside class="resumen-pago">
+
+                        <h2>Tu pedido</h2>
+
+                        <div
+                            id="resumen-productos-pago"
+                            class="resumen-productos-pago"
+                            aria-live="polite"
+                        >
+                            <!-- Los productos se insertan desde scripts.js -->
+                        </div>
+
+
+                        <!-- =========================
+                             CUPÓN DE DESCUENTO
+                        ========================== -->
+                        <div class="seccion-cupon">
+
+                            <h3>¿Tenés un cupón?</h3>
+
+                            <form id="formulario-cupon">
+
+                                <label for="codigo-cupon">
+                                    Código de descuento
+                                </label>
+
+                                <div class="campo-cupon">
+                                    <input
+                                        type="text"
+                                        id="codigo-cupon"
+                                        name="cupon"
+                                        placeholder="Ingresá tu código"
+                                        autocomplete="off"
+                                    >
+
+                                    <button
+                                        type="submit"
+                                        id="boton-aplicar-cupon"
+                                        class="boton-secundario"
+                                    >
+                                        Aplicar
+                                    </button>
+                                </div>
+
+                            </form>
+
+                            <p
+                                id="mensaje-cupon"
+                                class="mensaje-cupon"
+                                role="status"
+                                aria-live="polite"
+                            ></p>
+
+                        </div>
+
+
+                        <!-- =========================
+                             TOTALES
+                        ========================== -->
+                        <div class="totales-pago">
+
+                            <div class="resumen-linea">
+                                <span>Subtotal</span>
+                                <span id="pago-subtotal">$0.00</span>
+                            </div>
+
+                            <div class="resumen-linea">
+                                <span>Descuento</span>
+                                <span id="pago-descuento">-$0.00</span>
+                            </div>
+
+                            <div class="resumen-linea">
+                                <span>Envío</span>
+                                <span id="pago-envio">$0.00</span>
+                            </div>
+
+                            <div class="resumen-linea resumen-total">
+                                <span>Total a pagar</span>
+                                <span id="pago-total">$0.00</span>
+                            </div>
+
+                        </div>
+
+
+                        <p class="nota-resumen">
+                            Revisá los datos y el total antes de confirmar
+                            tu pedido.
+                        </p>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+    <footer id="pie-pagina" class="pie-pagina">
+
+        <div class="contenido-footer">
+
+            <div class="footer-marca">
+
+                <a href="../index.html" class="logo logo-footer">
+                    <span>Dulmori</span>
+                </a>
+
+                <p>
+                    Panadería y cafetería para disfrutar los pequeños
+                    momentos de la vida.
+                </p>
+
+            </div>
+
+
+            <div class="footer-enlaces">
+
+                <h3>Explorá</h3>
+
+                <a href="../index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="nosotros.html">Nosotros</a>
+
+            </div>
+
+
+            <div class="footer-enlaces">
+
+                <h3>Tu compra</h3>
+
+                <a href="carrito.html">Carrito</a>
+                <a href="pago.html">Finalizar compra</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-inferior">
+
+            <p>
+                &copy; <span id="anio-actual">2026</span> Dulmori.
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript compartido -->
+    <script src="../scripts.js"></script>
+
+    <script>
+        const anioActual = document.getElementById("anio-actual");
+
+        if (anioActual) {
+            anioActual.textContent = new Date().getFullYear();
+        }
+    </script>
+
+</body>
+</html>

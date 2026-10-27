@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Consultá el resumen de tu pedido y la confirmación de tu compra en Dulmori."
+    >
+
+    <title>Pedido confirmado | Dulmori</title>
+
+    <!-- Hoja de estilos compartida -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+    <header class="encabezado">
+
+        <div class="barra-superior">
+            <p>Un pequeño antojo puede alegrar tu día</p>
+        </div>
+
+        <div class="contenedor-header">
+
+            <a href="../index.html" class="logo" aria-label="Dulmori, página de inicio">
+                <span>Dulmori</span>
+            </a>
+
+            <nav class="navegacion-principal" aria-label="Navegación principal">
+                <a href="../index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="nosotros.html">Nosotros</a>
+            </nav>
+
+            <div class="acciones-header">
+                <a
+                    href="carrito.html"
+                    class="enlace-carrito"
+                    aria-label="Ver carrito de compras"
+                >
+                    <span>Carrito</span>
+                    <span id="contador-carrito" class="contador-carrito">0</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+  <main>
+
+    <section class="pagina pagina-confirmacion" id="confirmacion">
+
+        <section class="seccion-confirmacion">
+
+            <div class="contenido-confirmacion">
+
+                <!-- MENSAJE PRINCIPAL -->
+                <div class="encabezado-confirmacion">
+
+                    <div class="icono-confirmacion" aria-hidden="true">
+                        <span>✓</span>
+                    </div>
+
+                    <p class="subtitulo-seccion">
+                        GRACIAS POR ELEGIR DULMORI
+                    </p>
+
+                    <h1>¡Gracias por tu pedido!</h1>
+
+                    <p>
+                        Tu pedido ha sido registrado. Aquí podés revisar
+                        los productos y el detalle de tu compra.
+                    </p>
+
+                </div>
+
+
+                <!-- NÚMERO DE PEDIDO -->
+                <div class="numero-pedido-contenedor">
+
+                    <div>
+                        <span class="etiqueta-pedido">CONFIRMACIÓN DE COMPRA</span>
+                        <p>Número de pedido</p>
+                    </div>
+
+                    <strong id="numero-pedido">
+                        Pendiente de asignación
+                    </strong>
+
+                </div>
+
+
+                <!-- COLUMNAS PRINCIPALES -->
+                <div class="grid-confirmacion">
+
+                    <!-- COLUMNA IZQUIERDA -->
+                    <div class="columna-confirmacion-principal">
+
+                        <!-- DATOS DEL CLIENTE -->
+                        <section class="detalles-confirmacion panel-confirmacion">
+
+                            <div class="encabezado-detalles-confirmacion">
+                                <div>
+                                    <span class="etiqueta-pedido">INFORMACIÓN</span>
+                                    <h2>Datos de tu pedido</h2>
+                                </div>
+
+                                <p>Verificá la información registrada.</p>
+                            </div>
+
+                            <div class="datos-confirmacion">
+
+                                <div class="dato-confirmacion">
+                                    <span>Nombre</span>
+                                    <p id="confirmacion-nombre">—</p>
+                                </div>
+
+                                <div class="dato-confirmacion">
+                                    <span>Correo electrónico</span>
+                                    <p id="confirmacion-correo">—</p>
+                                </div>
+
+                                <div class="dato-confirmacion">
+                                    <span>Dirección de entrega</span>
+                                    <p id="confirmacion-direccion">—</p>
+                                </div>
+
+                                <div class="dato-confirmacion">
+                                    <span>Método de pago</span>
+                                    <p id="confirmacion-metodo-pago">—</p>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- LISTA DE PRODUCTOS -->
+                        <section class="productos-confirmacion panel-confirmacion">
+
+                            <div class="encabezado-detalles-confirmacion encabezado-productos">
+
+                                <div>
+                                    <span class="etiqueta-pedido">TU SELECCIÓN</span>
+                                    <h2>Resumen de tu compra</h2>
+                                </div>
+
+                                <p>
+                                    Revisá los productos incluidos en tu pedido.
+                                </p>
+
+                            </div>
+
+                            <div
+                                id="confirmacion-productos"
+                                class="lista-productos-confirmacion"
+                                aria-live="polite"
+                            >
+                                <!-- Los productos se insertan desde scripts.js -->
+                            </div>
+
+                            <p class="nota-lista-productos">
+                                Desplazate dentro de esta lista para consultar
+                                todos los productos.
+                            </p>
+
+                        </section>
+
+                    </div>
+
+
+                    <!-- COLUMNA DERECHA: DETALLE DE PAGO -->
+                    <aside class="columna-confirmacion-lateral">
+
+                        <section class="totales-confirmacion panel-confirmacion">
+
+                            <div class="encabezado-pago-confirmacion">
+                                <span class="etiqueta-pedido">RESUMEN ECONÓMICO</span>
+                                <h2>Detalle de pago</h2>
+                                <p>El desglose final de tu compra.</p>
+                            </div>
+
+                            <div class="resumen-linea">
+                                <span>Subtotal</span>
+                                <span id="confirmacion-subtotal">$0.00</span>
+                            </div>
+
+                            <div class="resumen-linea">
+                                <span>Descuento</span>
+                                <span id="confirmacion-descuento">-$0.00</span>
+                            </div>
+
+                            <div class="resumen-linea">
+                                <span>Envío</span>
+                                <span id="confirmacion-envio">$0.00</span>
+                            </div>
+
+                            <div class="resumen-linea resumen-total">
+                                <span>Total</span>
+                                <span id="confirmacion-total">$0.00</span>
+                            </div>
+
+                            <div class="nota-pago-confirmacion">
+                                <span aria-hidden="true">✓</span>
+                                <p>Resumen correspondiente a tu pedido registrado.</p>
+                            </div>
+
+                        </section>
+
+                    </aside>
+
+                </div>
+
+
+                <!-- ACCIONES FINALES -->
+                <div class="acciones-confirmacion">
+
+                    <a href="../index.html" class="boton-principal">
+                        Volver al inicio
+                    </a>
+
+                    <a href="catalogo.html" class="boton-secundario">
+                        Seguir explorando
+                    </a>
+
+                </div>
+
+
+                <p class="nota-confirmacion">
+                    Conservá tu número de pedido para consultar los detalles
+                    de tu compra cuando lo necesités.
+                </p>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+    <footer id="pie-pagina" class="pie-pagina">
+
+        <div class="contenido-footer">
+
+            <div class="footer-marca">
+
+                <a href="../index.html" class="logo logo-footer">
+                    <span>Dulmori</span>
+                </a>
+
+                <p>
+                    Panadería y cafetería para disfrutar los pequeños
+                    momentos de la vida.
+                </p>
+
+            </div>
+
+
+            <div class="footer-enlaces">
+
+                <h3>Explorá</h3>
+
+                <a href="../index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="nosotros.html">Nosotros</a>
+
+            </div>
+
+
+            <div class="footer-enlaces">
+
+                <h3>Tu compra</h3>
+
+                <a href="carrito.html">Carrito</a>
+                <a href="pago.html">Finalizar compra</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-inferior">
+
+            <p>
+                &copy; <span id="anio-actual">2026</span> Dulmori.
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript compartido -->
+    <script src="../scripts.js"></script>
+
+    <script>
+        const anioActual = document.getElementById("anio-actual");
+
+        if (anioActual) {
+            anioActual.textContent = new Date().getFullYear();
+        }
+    </script>
+
+</body>
+</html>

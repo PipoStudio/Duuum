@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Explorá el catálogo de Dulmori: pasteles, postres, panadería dulce y bebidas para disfrutar."
+    >
+
+    <title>Catálogo | Dulmori</title>
+
+    <!-- Archivos compartidos ubicados en la raíz -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+    <header class="encabezado">
+
+        <div class="barra-superior">
+            <p>Un pequeño antojo puede alegrar tu día</p>
+        </div>
+
+        <div class="contenedor-header">
+
+            <a href="../index.html" class="logo" aria-label="Dulmori, página de inicio">
+                <span>Dulmori</span>
+            </a>
+
+            <nav class="navegacion-principal" aria-label="Navegación principal">
+                <a href="../index.html">Inicio</a>
+                <a href="catalogo.html" class="activo" aria-current="page">Catálogo</a>
+                <a href="nosotros.html">Nosotros</a>
+            </nav>
+
+            <div class="acciones-header">
+                <a
+                    href="carrito.html"
+                    class="enlace-carrito"
+                    aria-label="Ver carrito de compras"
+                >
+                    <span>Carrito</span>
+                    <span id="contador-carrito" class="contador-carrito">0</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             PORTADA DEL CATÁLOGO
+        ========================== -->
+        <section class="pagina pagina-catalogo" id="catalogo">
+
+            <section class="hero-catalogo">
+
+                <div class="contenido-hero-catalogo">
+                    <p class="subtitulo-seccion">DESCUBRÍ DULMORI</p>
+
+                    <h1>Nuestro catálogo</h1>
+
+                    <p>
+                        Desde algo dulce para acompañar tu café hasta ese
+                        pastel especial que tenés ganas de probar.
+                        Encontrá tu próximo favorito.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 FILTROS Y BÚSQUEDA
+            ========================== -->
+            <section class="seccion-catalogo">
+
+                <div class="encabezado-seccion">
+                    <p class="subtitulo-seccion">HECHO PARA DISFRUTAR</p>
+                    <h2>Encontrá algo delicioso</h2>
+                    <p>Explorá nuestros productos y elegí lo que más se te antoje.</p>
+                </div>
+
+
+                <div class="controles-catalogo">
+
+                    <div class="campo-filtro">
+                        <label for="filtro-categoria">Categoría</label>
+
+                        <select id="filtro-categoria" name="categoria">
+                            <option value="">Todas las categorías</option>
+                            <option value="Pasteles">Pasteles</option>
+                            <option value="Postres">Postres</option>
+                            <option value="Bebidas calientes">Bebidas calientes</option>
+                            <option value="Bebidas frías">Bebidas frías</option>
+                            <option value="Panadería dulce">Panadería dulce</option>
+                        </select>
+                    </div>
+
+
+                    <div class="campo-busqueda">
+                        <label for="buscar-producto">Buscar producto</label>
+
+                        <input
+                            type="search"
+                            id="buscar-producto"
+                            name="buscar"
+                            placeholder="¿Qué se te antoja?"
+                            autocomplete="off"
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     LISTADO DE PRODUCTOS
+                ========================== -->
+                <div
+                    id="catalogo-productos"
+                    class="grid-productos"
+                    aria-live="polite"
+                >
+                    <!--
+                        Las tarjetas se generarán desde scripts.js.
+                        Conservamos el ID para conectarlo con la lógica
+                        de productos, filtros, búsqueda y carrito.
+                    -->
+                </div>
+
+
+                <p
+                    id="mensaje-catalogo"
+                    class="mensaje-catalogo"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+    <footer id="pie-pagina" class="pie-pagina">
+
+        <div class="contenido-footer">
+
+            <div class="footer-marca">
+                <a href="../index.html" class="logo logo-footer">
+                    <span>Dulmori</span>
+                </a>
+
+                <p>
+                    Panadería y cafetería para disfrutar los pequeños
+                    momentos de la vida.
+                </p>
+            </div>
+
+
+            <div class="footer-enlaces">
+                <h3>Explorá</h3>
+
+                <a href="../index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="nosotros.html">Nosotros</a>
+            </div>
+
+
+            <div class="footer-enlaces">
+                <h3>Tu compra</h3>
+
+                <a href="carrito.html">Carrito</a>
+                <a href="pago.html">Finalizar compra</a>
+            </div>
+
+        </div>
+
+
+        <div class="footer-inferior">
+            <p>
+                &copy; <span id="anio-actual">2026</span> Dulmori.
+                Todos los derechos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript compartido -->
+    <script src="../scripts.js"></script>
+
+    <script>
+        const anioActual = document.getElementById("anio-actual");
+
+        if (anioActual) {
+            anioActual.textContent = new Date().getFullYear();
+        }
+    </script>
+
+    <!-- Aplicar la categoría seleccionada desde la página de inicio -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const parametros = new URLSearchParams(window.location.search);
+            const categoria = parametros.get("categoria");
+            const filtro = document.getElementById("filtro-categoria");
+
+            if (categoria && filtro) {
+                const opcionDisponible = Array.from(filtro.options).find(
+                    opcion =>
+                        opcion.value.toLocaleLowerCase("es") ===
+                        categoria.toLocaleLowerCase("es")
+                );
+
+                if (opcionDisponible) {
+                    filtro.value = opcionDisponible.value;
+                    filtro.dispatchEvent(new Event("change", { bubbles: true }));
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

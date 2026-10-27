@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Dulmori: panadería y cafetería con pasteles, postres, pan dulce y café para disfrutar cada momento."
+    >
+
+    <title>Dulmori | Panadería y Cafetería</title>
+
+    <!-- Hoja de estilos compartida -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+    <header class="encabezado">
+
+        <div class="barra-superior">
+            <p>Un pequeño antojo puede alegrar tu día</p>
+        </div>
+
+        <div class="contenedor-header">
+
+            <a href="index.html" class="logo" aria-label="Dulmori, página de inicio">
+                <span>Dulmori</span>
+            </a>
+
+            <nav class="navegacion-principal" aria-label="Navegación principal">
+                <a href="index.html" class="activo">Inicio</a>
+                <a href="subcarpetas/catalogo.html">Catálogo</a>
+                <a href="subcarpetas/nosotros.html">Nosotros</a>
+            </nav>
+
+            <div class="acciones-header">
+                <a
+                    href="subcarpetas/carrito.html"
+                    class="enlace-carrito"
+                    aria-label="Ver carrito de compras"
+                >
+                    <span>Carrito</span>
+                    <span id="contador-carrito" class="contador-carrito">0</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             INICIO / PORTADA
+        ========================== -->
+        <section id="pagina-inicio" class="pagina pagina-inicio">
+
+            <!-- HERO -->
+            <section class="hero-inicio">
+
+                <div class="contenido-hero">
+
+                    <div class="texto-hero">
+                        <p class="subtitulo-hero">
+                            PANADERÍA &amp; CAFETERÍA
+                        </p>
+
+                        <h1>
+                            Un momento dulce,
+                            <span>hecho para vos.</span>
+                        </h1>
+
+                        <p class="descripcion-hero">
+                            En Dulmori creemos que los pequeños momentos
+                            merecen algo especial. Descubrí nuestros pasteles,
+                            postres, panes y bebidas preparados para acompañarte.
+                        </p>
+
+                        <div class="botones-hero">
+                            <a
+                                href="subcarpetas/catalogo.html"
+                                class="boton-principal"
+                            >
+                                Explorar catálogo
+                            </a>
+
+                            <a
+                                href="subcarpetas/nosotros.html"
+                                class="boton-secundario"
+                            >
+                                Conocé Dulmori
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="imagen-hero">
+                        <img
+                            src="https://res.cloudinary.com/dw9mt9w4v/image/upload/v1/dulmori/hero"
+                            alt="Selección de productos de panadería y cafetería Dulmori"
+                            onerror="this.style.display='none';"
+                        >
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 CATEGORÍAS
+            ========================== -->
+            <section class="seccion-categorias">
+
+                <div class="encabezado-seccion">
+                    <p class="subtitulo-seccion">DESCUBRÍ NUESTROS SABORES</p>
+                    <h2>¿Qué se te antoja hoy?</h2>
+                    <p>
+                        Encontrá algo delicioso para acompañar tu día.
+                    </p>
+                </div>
+
+                <div class="grid-categorias">
+
+                    <a
+                        href="subcarpetas/catalogo.html?categoria=Pasteles"
+                        class="tarjeta-categoria"
+                        data-categoria="Pasteles"
+                    >
+                        <div class="imagen-categoria">
+                            <img
+                                src="https://res.cloudinary.com/dw9mt9w4v/image/upload/v1/dulmori/pasteles"
+                                alt="Pasteles Dulmori"
+                                loading="lazy"
+                                onerror="this.style.display='none';"
+                            >
+                        </div>
+
+                        <div class="contenido-categoria">
+                            <h3>Pasteles</h3>
+                            <p>Un detalle dulce para cualquier ocasión.</p>
+                            <span class="enlace-categoria">Explorar →</span>
+                        </div>
+                    </a>
+
+
+                    <a
+                        href="subcarpetas/catalogo.html?categoria=Bebidas%20calientes"
+                        class="tarjeta-categoria"
+                        data-categoria="Bebidas calientes"
+                    >
+                        <div class="imagen-categoria">
+                            <img
+                                src="https://res.cloudinary.com/dw9mt9w4v/image/upload/v1/dulmori/bebidas-calientes"
+                                alt="Bebidas calientes Dulmori"
+                                loading="lazy"
+                                onerror="this.style.display='none';"
+                            >
+                        </div>
+
+                        <div class="contenido-categoria">
+                            <h3>Bebidas calientes</h3>
+                            <p>Tu bebida favorita para hacer una pausa.</p>
+                            <span class="enlace-categoria">Explorar →</span>
+                        </div>
+                    </a>
+
+
+                    <a
+                        href="subcarpetas/catalogo.html?categoria=Panader%C3%ADa%20dulce"
+                        class="tarjeta-categoria"
+                        data-categoria="Panadería dulce"
+                    >
+                        <div class="imagen-categoria">
+                            <img
+                                src="https://res.cloudinary.com/dw9mt9w4v/image/upload/v1/dulmori/panaderia-dulce"
+                                alt="Panadería dulce Dulmori"
+                                loading="lazy"
+                                onerror="this.style.display='none';"
+                            >
+                        </div>
+
+                        <div class="contenido-categoria">
+                            <h3>Panadería dulce</h3>
+                            <p>Pequeños placeres recién descubiertos.</p>
+                            <span class="enlace-categoria">Explorar →</span>
+                        </div>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 PRODUCTOS DESTACADOS
+            ========================== -->
+            <section class="seccion-destacados">
+
+                <div class="encabezado-seccion">
+                    <p class="subtitulo-seccion">LOS FAVORITOS</p>
+                    <h2>Un antojo que vale la pena</h2>
+                    <p>
+                        Descubrí algunos de los productos que hacen especial
+                        cada visita a Dulmori.
+                    </p>
+                </div>
+
+                <!--
+                    Los productos destacados se cargarán desde scripts.js.
+                    Se conserva este ID para la lógica existente.
+                -->
+                <div
+                    id="productos-destacados"
+                    class="grid-productos"
+                >
+                    <!-- Productos generados mediante JavaScript -->
+                </div>
+
+                <div class="contenedor-boton-catalogo">
+                    <a
+                        href="subcarpetas/catalogo.html"
+                        class="boton-principal"
+                    >
+                        Ver todo el catálogo
+                    </a>
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 BANNER DE MARCA
+            ========================== -->
+            <section class="franja-marca">
+
+                <div class="contenido-franja-marca">
+                    <p class="subtitulo-seccion">HECHO PARA DISFRUTAR</p>
+
+                    <h2>
+                        Hay momentos que saben mejor con algo dulce.
+                    </h2>
+
+                    <p>
+                        Compartí, celebrá o simplemente regalate una pausa
+                        con los sabores de Dulmori.
+                    </p>
+
+                    <a
+                        href="subcarpetas/catalogo.html"
+                        class="boton-principal"
+                    >
+                        Encontrá tu favorito
+                    </a>
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+    <footer id="pie-pagina" class="pie-pagina">
+
+        <div class="contenido-footer">
+
+            <div class="footer-marca">
+                <a href="index.html" class="logo logo-footer">
+                    <span>Dulmori</span>
+                </a>
+
+                <p>
+                    Panadería y cafetería para disfrutar los pequeños
+                    momentos de la vida.
+                </p>
+            </div>
+
+
+            <div class="footer-enlaces">
+                <h3>Explorá</h3>
+
+                <a href="index.html">Inicio</a>
+                <a href="subcarpetas/catalogo.html">Catálogo</a>
+                <a href="subcarpetas/nosotros.html">Nosotros</a>
+            </div>
+
+
+            <div class="footer-enlaces">
+                <h3>Tu compra</h3>
+
+                <a href="subcarpetas/carrito.html">Carrito</a>
+                <a href="subcarpetas/pago.html">Finalizar compra</a>
+            </div>
+
+        </div>
+
+
+        <div class="footer-inferior">
+            <p>
+                &copy; <span id="anio-actual">2026</span> Dulmori.
+                Todos los derechos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript compartido -->
+    <script src="scripts.js"></script>
+
+    <!-- Año automático del pie de página -->
+    <script>
+        const anioActual = document.getElementById("anio-actual");
+
+        if (anioActual) {
+            anioActual.textContent = new Date().getFullYear();
+        }
+    </script>
+
+</body>
+</html>
